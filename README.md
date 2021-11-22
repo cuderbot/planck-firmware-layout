@@ -9,6 +9,8 @@ TODO:
 - better access for `( { [ ] } ) / ; ' "`
 - Game support layout? (FPS, lol, Genshin Impact)
 
+All layout images where created using [keyboard-layout-editor.com](http://www.keyboard-layout-editor.com/).
+
 ## Build
 
 ## Base layout (QWERTY)
