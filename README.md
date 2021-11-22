@@ -13,7 +13,7 @@ TODO:
 
 ## Base layout (QWERTY)
 
-![base-qwerty-image](/docs/images/layout-base.png)
+![base-qwerty-image](docs/images/layout-base.png)
 
 trying to handle ctrl/esc
 
