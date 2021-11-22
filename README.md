@@ -21,6 +21,8 @@ trying to handle ctrl/esc
 
 ## Symbol / Number layout
 
+![symbol-number-image](docs/images/layout/symbol-number.png)
+
 ## Navigation layout
 
 ## Adjust layout
