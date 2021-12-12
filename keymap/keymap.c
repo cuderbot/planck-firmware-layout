@@ -50,14 +50,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |SFT/( |   Z  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   .  |   /  |NUM   |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |      |      | GUI  |     SPC     |     ENT     | GUI  |      |      |      |
+ * |      |      |      | GUI  |     SPC     |     ENT     |   `  |   -  |   =  |   \  |
  * `-----------------------------------------------------------------------------------'
  */
 [_QWERTY] = LAYOUT_planck_grid(
     LCTL_T(KC_TAB), _________________QWERTY_L1_________________, _________________QWERTY_R1_________________, KC_DEL,
     LALT_T(KC_ESC), _________________QWERTY_L2_________________, _________________QWERTY_R2_________________, KC_BSLS,
     KC_LSPO,        _________________QWERTY_L3_________________, _________________QWERTY_R3_________________, NUM,
-    XXXXXXX,        XXXXXXX, XXXXXXX, KC_LGUI, KC_BSPC, KC_BSPC, KC_ENT, KC_ENT, XXXXXXX, XXXXXXX, XXXXXXX,   XXXXXXX,
+    XXXXXXX,        XXXXXXX, XXXXXXX, KC_LGUI, KC_BSPC, KC_BSPC, KC_ENT, KC_ENT, KC_GRV, KC_MINS, KC_EQL,     KC_NUBS
 ),
 
 /* Numbers and Symbols
