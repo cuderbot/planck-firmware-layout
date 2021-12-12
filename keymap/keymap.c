@@ -262,8 +262,8 @@ void matrix_scan_user(void) {
 
 bool music_mask_user(uint16_t keycode) {
   switch (keycode) {
-    case RAISE:
-    case LOWER:
+    case NUM:
+    case NAV:
       return false;
     default:
       return true;
