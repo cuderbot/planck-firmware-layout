@@ -21,9 +21,9 @@ enum planck_keycodes {
 
 // Layers shortcut
 #define NUM MO(_NUMBER)
-#define NAV MO(_NAVIGATION)
-#define VAL TG(_GAM_VAL)
-#define GEN TG(_GAM_GEN)
+#define NAV MO(_NAVIGA)
+#define VAL TG(_VALORA)
+#define GEN TG(_GENIMP)
 
 // Shortcuts
 #define KC_CTTB LCTL_T(KC_TAB)
