@@ -26,38 +26,39 @@ enum planck_keycodes {
 #define GEN TG(_GENIMP)
 
 // Shortcuts
-#define KC_CTTB LCTL_T(KC_TAB)
-#define KC_ALEC LALT_T(KC_ESC)
+#define KC_CTTB LCTL_T(KC_TAB)  // left ctrl(held) -> tab(tap)
+#define KC_ALEC LALT_T(KC_ESC)  // left alt(held) -> esc(tap)
+#define KC_SPGU LGUI_T(KC_SPC)  // left gui(held) -> space(tap)
 
 /* QWERTY (35 keys)
  * ,-----------------------------------------------------------------------------------.
- * |   Q  |   W  |   E  |   R  |   T  | CTAB | Bksp |   Y  |   U  |   I  |   O  |   P  |
+ * | CTAB |   Q  |   W  |   E  |   R  |   T  |   Y  |   U  |   I  |   O  |   P  | Bksp |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |   A  |   S  |   D  |   F  |   G  | AESC |  '   |   H  |   J  |   K  |   L  |   ;  |
+ * | AESC |   A  |   S  |   D  |   F  |   G  |   H  |   J  |   K  |   L  |   ;  |  '   |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |SFT/( |   Z  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   .  |   /  |NUM   |
+ * | SFT/(|   Z  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   .  |   /  |NUM   |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | NUM  |      |      | GUI  |     SPC     |     ENT     |   `  |   -  |   =  |   \  |
+ * | NUM  |      |  OPT | GUI  |     SPC     |     ENT     |   `  |   -  |   =  |   \  |
  * `-----------------------------------------------------------------------------------'
  *                                      ___QWERTY_L1___
  *                                      ___QWERTY_L2___
  *                                      ___QWERTY_L3___
  *                                      ___QWERTY_L4___
  */
-#define QWERTY_L1   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T, KC_CTTB, KC_BSPC, KC_Y, KC_U,   KC_I,     KC_O,   KC_P
-#define QWERTY_L2   KC_A,     KC_S,     KC_D,     KC_F,     KC_G, KC_ALEC, KC_QUOT, KC_H, KC_J,   KC_K,     KC_L,   KC_SCLN
-#define QWERTY_L3   KC_LSPO,  KC_Z,     KC_X,     KC_C,     KC_V, KC_B,    KC_RSPC, KC_N, KC_M,   KC_COMM,  KC_DOT, KC_SLASH
-#define QWERTY_L4   NUM,      _______,  _______,  KC_LGUI,        KC_SPC,         KC_ENT, KC_GRV, KC_MINS,  KC_EQL, KC_NUBS 
+#define QWERTY_L1   KC_CTTB,  KC_Q,     KC_W,     KC_E,     KC_R, KC_T,    KC_Y,    KC_U,   KC_I,     KC_O,     KC_P,     KC_BSPC
+#define QWERTY_L2   KC_ALEC,  KC_A,     KC_S,     KC_D,     KC_F, KC_G,    KC_H,    KC_J,   KC_K,     KC_L,     KC_SCLN,  KC_QUOT
+#define QWERTY_L3   KC_LSPO,  KC_Z,     KC_X,     KC_C,     KC_V, KC_B,    KC_N,    KC_M,   KC_COMM,  KC_DOT,   KC_SLASH, KC_RSPC
+#define QWERTY_L4   NUM,      _______,  KC_LOPT,  KC_LGUI,        KC_SPGU,           KC_ENT, KC_GRV,   KC_MINS,  KC_EQL,   KC_NUBS 
 
 /* Numbers and Symbols  (35 keys)
  * ,-----------------------------------------------------------------------------------.
  * | CTTB |   1  |   2  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | ALEC |   `  |   -  |   =  |   [  |   ]  |   \  |      |      |  Up  |      |      |
+ * | ALEC |   `  |   -  |   =  |   [  |   ]  |   \  |  Up  |      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | LSFT |      |      |      |      |      |      |      | Left | Down |Right | RSFT |
+ * | LSFT |      |      |      |      |      | Left | Down |Right | RSFT |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |      |      | GUI  |     SPC     |     ENT     | NEXT |VOLDWN|VOLUP | PLAY |
+ * |QWERTY|      |      | GUI  |     SPC     |     ENT     | NEXT |VOLDWN|VOLUP | PLAY |
  * `-----------------------------------------------------------------------------------'
  *                                      ___NUMBER_L1___
  *                                      ___NUMBER_L2___
@@ -65,9 +66,9 @@ enum planck_keycodes {
  *                                      ___NUMBER_L4___
  */
 #define NUMBER_L1 KC_CTTB,  KC_1,     KC_2,     KC_3,     KC_4,     KC_5,     KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     _______
-#define NUMBER_L2 KC_ALEC,  KC_GRV,   KC_MINS,  KC_EQL,   KC_NUBS,  _______,  _______,  _______,  _______,  _______,  _______,  _______
-#define NUMBER_L3 KC_LSFT,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______
-#define NUMBER_L4 NUM,      _______,  _______,  KC_LGUI,             KC_SPC,             KC_ENT,  _______,  _______,  _______,  _______ 
+#define NUMBER_L2 KC_ALEC,  KC_GRV,   KC_MINS,  KC_EQL,   KC_LBRC,  KC_RBRC,  KC_NUBS,  KC_UP,    _______,  _______,  _______,  _______
+#define NUMBER_L3 KC_LSFT,  _______,  _______,  _______,  _______,  _______,  KC_LEFT,  KC_DOWN,  KC_RGHT,  _______,  _______,  _______
+#define NUMBER_L4 QWERTY,   _______,  _______,  KC_LGUI,            KC_SPGU,            KC_ENT,   _______,  _______,  _______,  _______ 
 
 
 /* Navigation  (35 keys)
@@ -94,9 +95,9 @@ enum planck_keycodes {
 /* Adjust (Lower + Raise)  (35 keys)
  *                      v------------------------RGB CONTROL--------------------v
  * ,-----------------------------------------------------------------------------------.
- * | Reset|      |Debug | RGB  |RGBMOD| HUE+ | HUE- | SAT+ | SAT- |BRGTH+|BRGTH-|  Del |
+ * | Reset|      | RGB  |RGBMOD| HUE+ | HUE- | SAT+ | SAT- |BRGTH+|BRGTH-|  Del |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |      |MUSmod|Aud on|Audoff|AGnorm|AGswap|Qwerty|      |      |      |      |
+ * | Debug|      |MUSmod|Aud on|Audoff|AGnorm|AGswap|Qwerty|      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |Voice-|Voice+|Mus on|Musoff|MIDIon|MIDIof|TermOn|TermOf|      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
@@ -108,8 +109,8 @@ enum planck_keycodes {
  *                                      ___ADJUST_L4___
  */
 
-#define ADJUST_L1 RESET,    _______,  DEBUG,    RGB_TOG,  RGB_MOD,  RGB_HUI,  RGB_HUD,  RGB_SAI,  RGB_SAD,  RGB_VAI,  RGB_VAD,  KC_DEL
-#define ADJUST_L2 _______,  _______,  MU_MOD,   AU_ON,    AU_OFF,   AG_NORM,  AG_SWAP,  QWERTY,   _______,  _______,  _______,  _______
+#define ADJUST_L1 RESET,    _______,  RGB_TOG,  RGB_MOD,  RGB_HUI,  RGB_HUD,  RGB_SAI,  RGB_SAD,  RGB_VAI,  RGB_VAD,  KC_DEL,   _______
+#define ADJUST_L2 DEBUG,    _______,  MU_MOD,   AU_ON,    AU_OFF,   AG_NORM,  AG_SWAP,  QWERTY,   _______,  _______,  _______,  _______
 #define ADJUST_L3 _______,  MUV_DE,   MUV_IN,   MU_ON,    MU_OFF,   MI_ON,    MI_OFF,   TERM_ON,  TERM_OFF, _______,  _______,  _______
 #define ADJUST_L4 _______,  _______,  _______,  KC_LGUI,             KC_SPC,             KC_ENT,  _______,  _______,  _______,  _______ 
 
@@ -118,7 +119,7 @@ enum planck_keycodes {
  * ,-----------------------------------------------------------------------------------.
  * |      |   1  |   2  |   3  |   4  |      |      |      |      |      |      |QWERTY|
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |  TAB |   Q  |   W  |   E  |   R  |      |      |      |      |      |      |      |
+ * | TAB  |   Q  |   W  |   E  |   R  |      |      |      |      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | CTRL |   A  |   S  |   D  |      |      |      |      |      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
@@ -139,7 +140,7 @@ enum planck_keycodes {
  * ,-----------------------------------------------------------------------------------.
  * |      |   1  |   2  |   3  |   4  |      |      |      |      |      |      |QWERTY|
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |  TAB |   Q  |   W  |   E  |   R  |      |      |      |      |      |      |      |
+ * | TAB  |   Q  |   W  |   E  |   R  |      |      |      |      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | CTRL |   A  |   S  |   D  |      |      |      |      |      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
